@@ -31,7 +31,7 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 left-6 z-50">
       {/* Chat Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -42,7 +42,7 @@ const Chatbot = () => {
 
       {/* Chatbox */}
       {isOpen && (
-        <div className="w-80 bg-white shadow-lg rounded-lg p-4 absolute bottom-14 right-0 flex flex-col">
+        <div className="w-80 bg-white shadow-lg rounded-lg p-4 absolute bottom-14 left-0 flex flex-col">
           <h3 className="text-lg font-semibold mb-2">Chat with AI</h3>
           <div className="h-48 overflow-y-auto p-2 bg-gray-100 rounded-md">
             {messages.map((msg, index) => (

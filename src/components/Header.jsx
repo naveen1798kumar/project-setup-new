@@ -5,7 +5,6 @@ import { FaBarsStaggered } from "react-icons/fa6";
 
 const Header = ({ onToggleSidebar, isSidebarOpen }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  // const [isCoursesOpen, setIsCoursesOpen] = useState(false);
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
 
   useEffect(() => {
@@ -85,7 +84,11 @@ const defaultLinkClass = `
     >
       {/* Courses Button */}
       <button className="flex items-center gap-2 px-3 py-2 rounded-md font-medium text-gray-700 hover:text-indigo-500 hover:bg-gray-100 transition-all duration-300">
-        <span>Courses</span> <FaChevronDown />
+        <NavLink 
+        to="/courses"
+        className={({ isActive }) => (isActive ? activeLinkClass : defaultLinkClass)}
+        onClick={handleClick}
+        >Courses</NavLink> <FaChevronDown />
       </button>
 
       {/* Dropdown Menu (Centered & Responsive) */}
